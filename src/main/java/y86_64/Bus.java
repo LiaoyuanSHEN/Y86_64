@@ -10,4 +10,6 @@ public interface Bus {
 
     CPU getCPU();
 
+    void stop();
+
 }
