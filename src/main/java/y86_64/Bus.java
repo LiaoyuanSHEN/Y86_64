@@ -1,15 +1,13 @@
 package y86_64;
 
-public interface Bus {
+public interface Bus extends Component {
 
-    void registerMemory(Memory memory);
+    void registerComponent(long componentId, Component component);
 
-    void registerCPU(CPU cpu);
+    default <T extends Component> T getComponent(long componentId) {
+        return getComponent(componentId, "localhost");
+    }
 
-    Memory getMemory();
-
-    CPU getCPU();
-
-    void stop();
+    <T extends Component> T getComponent(long componentId, String host);
 
 }
