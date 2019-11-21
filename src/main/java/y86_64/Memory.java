@@ -4,7 +4,7 @@ import y86_64.exceptions.MemoryException;
 
 public interface Memory {
 
-    void init(int component) throws MemoryException;
+    void init(long component) throws MemoryException;
 
     long read(long address) throws MemoryException;
 
