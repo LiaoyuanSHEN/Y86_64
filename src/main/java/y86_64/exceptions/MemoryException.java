@@ -1,6 +1,6 @@
 package y86_64.exceptions;
 
-public class MemoryException extends Y86_64Exception {
+public class MemoryException extends ComponentException {
     public MemoryException() {
         super();
     }

@@ -1,6 +1,6 @@
 package y86_64;
 
-public interface Bus extends Component {
+public interface Bus extends Closeable {
 
     void registerComponent(long componentId, Component component);
 

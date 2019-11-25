@@ -1,7 +1,9 @@
 package y86_64;
 
-public interface Component {
+import y86_64.exceptions.ComponentException;
 
-    void stop();
+public interface Component extends Closeable {
+
+    void init(long component) throws ComponentException;
 
 }

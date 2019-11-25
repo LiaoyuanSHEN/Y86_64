@@ -1,9 +1,11 @@
 package y86_64;
 
+import y86_64.exceptions.CpuException;
+
 public interface CPU extends Component {
 
-    void compute();
+    void compute() throws CpuException;
 
-    void interrupt();
+    void interrupt(long code) throws CpuException;
 
 }
