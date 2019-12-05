@@ -28,6 +28,9 @@ public class TransportUtil {
 
     public static long readLongFromInputStream(InputStream in) throws IOException {
         long value = in.read();
+        if (value == -1) {
+            throw new IOException("InputStream Closed.");
+        }
         value <<= 8;
         value |= in.read();
         value <<= 8;
