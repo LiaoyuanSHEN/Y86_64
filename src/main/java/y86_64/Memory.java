@@ -4,8 +4,8 @@ import y86_64.exceptions.MemoryException;
 
 public interface Memory extends Component {
 
-    long read(long address) throws MemoryException;
+    byte readByte(long address) throws MemoryException;
 
-    void write(long address, long value) throws MemoryException;
+    void writeByte(long address, byte value) throws MemoryException;
 
 }
